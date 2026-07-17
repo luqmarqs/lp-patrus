@@ -12,6 +12,26 @@ create table if not exists public.manifesto_signatures (
 
 alter table public.manifesto_signatures enable row level security;
 
+-- Também atende instalações em que a tabela já existia antes desta migration.
+alter table public.manifesto_signatures
+  add column if not exists state text;
+
+update public.manifesto_signatures
+set state = 'MG'
+where state is null;
+
+alter table public.manifesto_signatures
+  alter column state set default 'MG',
+  alter column state set not null;
+
+alter table public.manifesto_signatures
+  drop constraint if exists manifesto_signatures_state_check;
+
+alter table public.manifesto_signatures
+  add constraint manifesto_signatures_state_check check (state = 'MG');
+
+drop policy if exists "Permite assinaturas públicas" on public.manifesto_signatures;
+
 create policy "Permite assinaturas públicas"
 on public.manifesto_signatures
 for insert
