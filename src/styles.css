@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root { font-family: 'Space Grotesk', Arial, sans-serif; color: #101010; background: #f3b440; font-synthesis: none; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; overflow-x: hidden; }
+button, input, select { font: inherit; }
+button { cursor: pointer; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.site-header { min-height: 70px; padding: 12px clamp(20px, 5vw, 78px); background: #006f91; display: flex; align-items: center; justify-content: space-between; color: #fff; position: relative; z-index: 2; }
+.wordmark { color: inherit; font-size: 14px; font-weight: 700; text-decoration: none; line-height: .78; letter-spacing: -.09em; display: grid; }
+.site-header button { background: transparent; border: 0; color: inherit; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .03em; padding: 10px 0; }
+.site-header button span { font-size: 20px; margin-left: 6px; }
+.texture-orange { background: #c85e0b url('/Sem título - 17 de julho de 2026 às 10.15.56-1.png') center / cover; }
+.dots-blue { background: #006e91 url('/Sem título - 17 de julho de 2026 às 10.15.56-5.png') center / cover; }
+.dots-green { background: #247900 url('/Sem título - 17 de julho de 2026 às 10.15.56-6.png') center / cover; }
+.dots-yellow { background: #f4b33c url('/Sem título - 17 de julho de 2026 às 10.15.56-7.png') center / cover; }
+.hero { position: relative; overflow: hidden; min-height: 585px; color: #fff; }
+.hero-inner { width: min(100% - 40px, 1180px); margin: 0 auto; padding: 76px 0 70px; position: relative; z-index: 1; }
+.eyebrow, .section-kicker { font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; line-height: 1.35; letter-spacing: .09em; text-transform: uppercase; margin: 0 0 16px; }
+.hero h1 { max-width: 750px; margin: 0; text-transform: uppercase; font-size: clamp(62px, 11.3vw, 166px); letter-spacing: -.09em; line-height: .77; font-weight: 700; }
+h1 em, h2 em { font-style: normal; color: #ffd22a; }
+.hero-lead { font-size: clamp(20px, 2vw, 29px); line-height: 1.05; max-width: 400px; font-weight: 600; margin: 36px 0 25px; }
+.hero-cta, .form-submit { border: 2px solid #111; background: #f8ca21; color: #101010; border-radius: 999px; padding: 15px 20px; font-weight: 700; font-size: 16px; box-shadow: 3px 3px 0 #111; transition: transform .15s, box-shadow .15s; }
+.hero-cta:hover, .form-submit:hover:not(:disabled) { transform: translate(2px, 2px); box-shadow: 1px 1px 0 #111; }
+.hero-sun { position: absolute; width: min(72vw, 900px); right: -20vw; bottom: -26vw; opacity: .98; }
+.opening { color: #fff; padding: 86px 20px 94px; }
+.content-narrow { max-width: 950px; margin: auto; }
+.opening h2, .form-copy h2 { font-size: clamp(39px, 6vw, 84px); letter-spacing: -.07em; line-height: .86; text-transform: uppercase; margin: 0 0 28px; }
+.opening h2 em { color: #8dd3e2; }
+.opening p:not(.section-kicker) { max-width: 560px; font-size: clamp(19px, 2.1vw, 28px); line-height: 1.13; margin: 0; font-weight: 500; }
+.manifesto { background: #f4b33c; padding: 85px 20px 100px; position: relative; overflow: hidden; }
+.manifesto-content { max-width: 780px; margin: auto; position: relative; z-index: 1; }
+.manifesto h2 { font-size: clamp(44px, 7vw, 94px); text-transform: uppercase; letter-spacing: -.08em; line-height: .83; margin: 0 0 42px; max-width: 700px; }
+.manifesto p:not(.section-kicker) { font-size: clamp(18px, 1.75vw, 24px); line-height: 1.29; font-weight: 500; margin: 0 0 26px; }
+.manifesto .closing { font-size: clamp(26px, 3.2vw, 44px); line-height: .98; font-weight: 700; margin-top: 45px; max-width: 620px; }
+.manifesto-sun { position: absolute; width: min(54vw, 720px); right: -18vw; top: 20px; opacity: .18; }
+.form-section { color: #fff; padding: 88px 20px; position: relative; overflow: hidden; }
+.form-layout { max-width: 1180px; margin: auto; position: relative; z-index: 1; }
+.form-copy { max-width: 540px; }
+.form-copy h2 { margin-bottom: 22px; }
+.form-copy h2::first-line { color: #f8ca21; }
+.form-copy p:not(.section-kicker) { font-size: 20px; line-height: 1.2; font-weight: 500; margin: 0 0 40px; }
+.form-sun { width: 510px; max-width: 95vw; position: absolute; top: -155px; right: -155px; opacity: .25; }
+.lead-form { width: 100%; max-width: 515px; }
+.form-field { margin-bottom: 12px; }
+.form-field > label:not(.sr-only) { display: block; margin: 0 0 7px; color: #fff; font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: .08em; }
+input, select { appearance: none; width: 100%; min-height: 53px; background: #fff; border: 2px solid #101010; border-radius: 8px; padding: 12px 14px; color: #101010; font-size: 16px; font-weight: 600; outline: none; }
+input::placeholder { color: #333; opacity: 1; }
+input:focus, select:focus { outline: 3px solid #ffd22a; outline-offset: 2px; }
+input[aria-invalid='true'], select[aria-invalid='true'] { border-color: #b00020; }
+input:disabled { opacity: .7; cursor: wait; }
+.select-wrap { position: relative; }
+.select-wrap::after { content: '⌄'; font-size: 24px; line-height: 1; position: absolute; right: 15px; top: 13px; pointer-events: none; color: #111; }
+.field-error, .load-error, .form-success { min-height: 0; margin: 5px 2px 0; font-size: 13px; line-height: 1.25; font-weight: 600; }
+.field-error { color: #fff2c8; }
+.load-error { color: #fff2c8; }
+.form-submit { width: 100%; min-height: 54px; margin-top: 7px; text-transform: uppercase; letter-spacing: .02em; }
+.form-submit:disabled { background: #cbd0bd; cursor: not-allowed; box-shadow: none; }
+.form-success { padding: 12px; background: #f7ca20; border: 2px solid #101010; border-radius: 8px; color: #111; margin-top: 16px; }
+.site-footer { background: #111; color: #d1d1d1; padding: 26px 24px; }
+.footer-inner { max-width: 1200px; min-height: 60px; margin: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; }
+.iza-logo { width: 140px; height: auto; object-fit: contain; }
+.psol-logo { height: 40px; width: auto; opacity: .7; object-fit: contain; }
+.footer-center { text-align: center; }
+.social-links { display: flex; justify-content: center; align-items: center; gap: 24px; margin-bottom: 12px; }
+.social-links a { display: grid; place-items: center; color: #fff; width: 24px; height: 24px; transition: color .15s; }
+.social-links a:hover, .social-links a:focus-visible { color: #d86f9d; }
+.social-links svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.6; }
+.social-links .filled { fill: currentColor; stroke: none; }
+.footer-center p { margin: 0; font-size: 12px; font-weight: 500; letter-spacing: .03em; line-height: 1.35; }
+.privacy-link { border: 0; background: transparent; padding: 7px 0 0; color: #fff; font-size: 12px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.privacy-link:hover, .privacy-link:focus-visible { color: #d86f9d; }
+.privacy-backdrop { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; padding: 16px; background: rgb(0 0 0 / .65); backdrop-filter: blur(4px); }
+.privacy-modal { width: min(100%, 720px); max-height: min(85vh, 760px); display: flex; flex-direction: column; overflow: hidden; border: 2px solid #111; border-radius: 14px; background: #fff9e9; box-shadow: 8px 8px 0 #111; }
+.privacy-header, .privacy-footer { flex: none; background: #fff; padding: 16px 20px; }
+.privacy-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 2px solid #e4d7c2; }
+.privacy-header h2 { margin: 0; font-size: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: -.04em; }
+.privacy-header button { width: 32px; height: 32px; border: 0; border-radius: 50%; background: #eee; color: #333; font-size: 26px; line-height: 1; }
+.privacy-header button:hover, .privacy-header button:focus-visible { background: #111; color: #fff; }
+.privacy-content { overflow-y: auto; padding: 22px 24px; color: #282828; font-size: 15px; line-height: 1.55; }
+.privacy-content p { margin: 0 0 16px; }
+.privacy-content h3 { margin: 25px 0 8px; color: #111; font-size: 16px; text-transform: uppercase; }
+.privacy-footer { display: flex; justify-content: flex-end; border-top: 2px solid #e4d7c2; }
+.privacy-footer button { min-height: 40px; border: 2px solid #111; border-radius: 6px; padding: 0 21px; background: #006e91; color: #fff; font-size: 13px; font-weight: 700; text-transform: uppercase; box-shadow: 2px 2px 0 #111; }
+.privacy-footer button:hover, .privacy-footer button:focus-visible { transform: translate(1px, 1px); box-shadow: 1px 1px 0 #111; }
+@media (min-width: 768px) { .site-header { min-height: 88px; } .wordmark { font-size: 20px; } .site-header button { font-size: 14px; } .hero { min-height: 680px; } .hero-inner { padding-top: 100px; } .hero-sun { right: -7vw; bottom: -38vw; } .opening { padding: 118px 40px; } .manifesto { padding: 125px 40px 138px; } .form-section { padding: 120px 40px; } .form-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(390px, .8fr); gap: 78px; align-items: start; } .form-copy p:not(.section-kicker) { margin-bottom: 0; } }
+@media (min-width: 1100px) { .footer-inner { position: relative; flex-direction: row; } .iza-logo { position: absolute; left: 0; } .psol-logo { position: absolute; right: 0; } }
+@media (min-width: 1200px) { .hero-inner { padding-top: 112px; } .hero-sun { right: -2vw; bottom: -31vw; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
