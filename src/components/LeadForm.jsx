@@ -43,6 +43,7 @@ export default function LeadForm() {
   const [touched, setTouched] = useState({})
   const [submitting, setSubmitting] = useState(false)
   const [success, setSuccess] = useState(false)
+  const [submitError, setSubmitError] = useState('')
   const fieldRefs = useRef({})
   const uid = useId()
   const isValidCity = useMemo(
@@ -71,6 +72,7 @@ export default function LeadForm() {
   function updateField(event) {
     const { name, value } = event.target
     setSuccess(false)
+    setSubmitError('')
     setValues((current) => ({
       ...current,
       [name]: name === 'whatsapp' ? formatWhatsapp(value) : name === 'birthDate' ? formatBirthDate(value) : value,
@@ -99,6 +101,8 @@ export default function LeadForm() {
         birthDate: birthDateToIso(values.birthDate),
       })
       setSuccess(true)
+    } catch {
+      setSubmitError('Não foi possível registrar sua assinatura agora. Tente novamente em instantes.')
     } finally {
       setSubmitting(false)
     }
@@ -156,6 +160,7 @@ export default function LeadForm() {
         {submitting ? 'Enviando...' : 'Assinar o manifesto'}
       </button>
       {success && <p className="form-success" role="status">Obrigada por assinar. Sua participação fortalece Minas Gerais.</p>}
+      {submitError && <p className="form-submit-error" role="alert">{submitError}</p>}
     </form>
   )
 }
