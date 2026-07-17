@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react'
-import { getMinasGeraisMunicipalities } from '../services/municipalities'
+import { getMunicipalities } from '../services/municipalities'
 
-export function useMunicipalities() {
+export function useMunicipalities(state) {
   const [municipalities, setMunicipalities] = useState([])
   const [status, setStatus] = useState('loading')
 
   useEffect(() => {
     const controller = new AbortController()
 
-    getMinasGeraisMunicipalities(controller.signal)
+    setStatus('loading')
+    setMunicipalities([])
+    getMunicipalities(state, controller.signal)
       .then((items) => {
         setMunicipalities(items)
         setStatus('ready')
@@ -18,7 +20,7 @@ export function useMunicipalities() {
       })
 
     return () => controller.abort()
-  }, [])
+  }, [state])
 
   return { municipalities, status }
 }

@@ -1,4 +1,5 @@
 import { useId, useMemo, useRef, useState } from 'react'
+import { brazilianStates } from '../constants/brazilianStates'
 import { useMunicipalities } from '../hooks/useMunicipalities'
 import { submitLead } from '../services/leadSubmission'
 
@@ -38,8 +39,8 @@ function birthDateToIso(value) {
 }
 
 export default function LeadForm({ onOpenPrivacy }) {
-  const { municipalities, status } = useMunicipalities()
   const [values, setValues] = useState(initialValues)
+  const { municipalities, status } = useMunicipalities(values.state)
   const [touched, setTouched] = useState({})
   const [submitting, setSubmitting] = useState(false)
   const [success, setSuccess] = useState(false)
@@ -60,7 +61,7 @@ export default function LeadForm({ onOpenPrivacy }) {
       const isoDate = birthDateToIso(value)
       return Boolean(isoDate) && isoDate <= new Date().toISOString().slice(0, 10)
     }
-    if (field === 'state') return value === 'MG'
+    if (field === 'state') return brazilianStates.some((state) => state.value === value)
     if (field === 'city') return status === 'ready' && isValidCity
     return true
   }
@@ -73,10 +74,10 @@ export default function LeadForm({ onOpenPrivacy }) {
     const { name, value } = event.target
     setSuccess(false)
     setSubmitError('')
-    setValues((current) => ({
-      ...current,
-      [name]: name === 'whatsapp' ? formatWhatsapp(value) : name === 'birthDate' ? formatBirthDate(value) : value,
-    }))
+    setValues((current) => {
+      const nextValue = name === 'whatsapp' ? formatWhatsapp(value) : name === 'birthDate' ? formatBirthDate(value) : value
+      return name === 'state' ? { ...current, state: nextValue, city: '' } : { ...current, [name]: nextValue }
+    })
   }
 
   function handleBlur(event) {
@@ -144,7 +145,7 @@ export default function LeadForm({ onOpenPrivacy }) {
         <label className="sr-only" htmlFor="state">Estado</label>
         <div className="select-wrap">
           <select id="state" {...register('state')}>
-            <option value="MG">Minas Gerais</option>
+            {brazilianStates.map((state) => <option key={state.value} value={state.value}>{state.label}</option>)}
           </select>
         </div>
         <p id={`${uid}-state-error`} className="field-error" role="alert">{fieldError('state')}</p>
@@ -153,7 +154,7 @@ export default function LeadForm({ onOpenPrivacy }) {
         <label className="sr-only" htmlFor="city">Município</label>
         <input id="city" list="mg-municipalities" type="text" autoComplete="address-level2" placeholder={status === 'loading' ? 'Carregando municípios...' : 'Município *'} disabled={status === 'loading'} {...register('city')} />
         <datalist id="mg-municipalities">{municipalities.map((municipality) => <option key={municipality.id} value={municipality.name} />)}</datalist>
-        {status === 'error' && <p className="load-error" role="alert">Não foi possível carregar os municípios. Atualize a página e tente novamente.</p>}
+        {status === 'error' && <p className="load-error" role="alert">Não foi possível carregar os municípios deste estado. Tente selecionar novamente.</p>}
         <p id={`${uid}-city-error`} className="field-error" role="alert">{fieldError('city')}</p>
       </div>
       <button className="form-submit" type="submit" disabled={submitting || status === 'loading'}>

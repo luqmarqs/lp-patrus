@@ -1,8 +1,9 @@
-const IBGE_MG_MUNICIPALITIES_URL =
-  'https://servicodados.ibge.gov.br/api/v1/localidades/estados/MG/municipios'
+function getMunicipalitiesUrl(state) {
+  return `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${state}/municipios`
+}
 
-export async function getMinasGeraisMunicipalities(signal) {
-  const response = await fetch(IBGE_MG_MUNICIPALITIES_URL, { signal })
+export async function getMunicipalities(state, signal) {
+  const response = await fetch(getMunicipalitiesUrl(state), { signal })
 
   if (!response.ok) {
     throw new Error('Não foi possível carregar os municípios.')
