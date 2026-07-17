@@ -76,7 +76,7 @@ export default function App() {
               <h2 id="form-title">Assine este manifesto.</h2>
               <p>Sua assinatura é um gesto por uma Minas Gerais mais justa, democrática e corajosa.</p>
             </div>
-            <LeadForm />
+            <LeadForm onOpenPrivacy={() => setIsPrivacyOpen(true)} />
           </div>
         </section>
       </main>

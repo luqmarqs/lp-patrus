@@ -37,7 +37,7 @@ function birthDateToIso(value) {
   return iso
 }
 
-export default function LeadForm() {
+export default function LeadForm({ onOpenPrivacy }) {
   const { municipalities, status } = useMunicipalities()
   const [values, setValues] = useState(initialValues)
   const [touched, setTouched] = useState({})
@@ -159,6 +159,10 @@ export default function LeadForm() {
       <button className="form-submit" type="submit" disabled={submitting || status === 'loading'}>
         {submitting ? 'Enviando...' : 'Assinar o manifesto'}
       </button>
+      <p className="form-privacy-notice">
+        Ao assinar, você concorda com o tratamento dos seus dados conforme a nossa{' '}
+        <button type="button" onClick={onOpenPrivacy}>Política de Privacidade</button>.
+      </p>
       {success && <p className="form-success" role="status">Obrigada por assinar. Sua participação fortalece Minas Gerais.</p>}
       {submitError && <p className="form-submit-error" role="alert">{submitError}</p>}
     </form>
