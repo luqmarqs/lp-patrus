@@ -3,14 +3,14 @@ import LeadForm from './components/LeadForm'
 import PrivacyPolicyModal from './components/PrivacyPolicyModal'
 
 const assets = {
-  orangeTexture: '/Sem título - 17 de julho de 2026 às 10.15.56-1.png',
-  blueTexture: '/Sem título - 17 de julho de 2026 às 10.15.56-2.png',
-  orangeDots: '/Sem título - 17 de julho de 2026 às 10.15.56-4.png',
-  blueDots: '/Sem título - 17 de julho de 2026 às 10.15.56-5.png',
-  greenDots: '/Sem título - 17 de julho de 2026 às 10.15.56-6.png',
-  yellowDots: '/Sem título - 17 de julho de 2026 às 10.15.56-7.png',
-  sun: '/Sem título - 17 de julho de 2026 às 10.15.56-16.png',
-  sunFine: '/Sem título - 17 de julho de 2026 às 10.15.56-17.png',
+  orangeTexture: '/Sem título - 17 de julho de 2026 às 10.15.56-1.webp',
+  blueTexture: '/Sem título - 17 de julho de 2026 às 10.15.56-2.webp',
+  orangeDots: '/Sem título - 17 de julho de 2026 às 10.15.56-4.webp',
+  blueDots: '/Sem título - 17 de julho de 2026 às 10.15.56-5.webp',
+  greenDots: '/Sem título - 17 de julho de 2026 às 10.15.56-6.webp',
+  yellowDots: '/Sem título - 17 de julho de 2026 às 10.15.56-7.webp',
+  sun: '/Sem título - 17 de julho de 2026 às 10.15.56-16.webp',
+  sunFine: '/Sem título - 17 de julho de 2026 às 10.15.56-17.webp',
 }
 
 const manifestoParagraphs = [
