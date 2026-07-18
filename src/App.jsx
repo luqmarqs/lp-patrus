@@ -80,7 +80,7 @@ export default function App() {
       <footer className="site-footer">
         <div className="footer-inner">
           <div className="footer-center">
-            <p>© 2026 IZA LOURENÇA - Pré-candidata a Deputada Estadual pelo PSOL. Todos os direitos reservados.</p>
+            <p>Assinado por Iza Lourença, Duda Salabert, Ana Pimentel, Bruno Pedralva, Bella Gonçalves e Célia Xakriabá.</p>
             <button className="privacy-link" type="button" onClick={() => setIsPrivacyOpen(true)}>Política de privacidade</button>
           </div>
         </div>
