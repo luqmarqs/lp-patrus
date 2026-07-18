@@ -18,13 +18,13 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
           <button type="button" aria-label="Fechar política de privacidade" onClick={onClose}>×</button>
         </header>
         <div className="privacy-content">
-          <p>Esta Política de Privacidade explica como o Manifesto em defesa da chapa Patrus, Áurea e Marília coleta, utiliza e protege as informações pessoais fornecidas neste site, em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD — Lei nº 13.709/2018).</p>
+          <p>Esta Política de Privacidade explica como este manifesto, assinado por Iza Lourença, Duda Salabert, Ana Pimentel, Bruno Pedralva, Bella Gonçalves e Célia Xakriabá, coleta, utiliza e protege as informações pessoais fornecidas neste site, em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD — Lei nº 13.709/2018).</p>
 
           <h3>1. Coleta de dados</h3>
           <p>Coletamos os dados que você informa voluntariamente ao assinar o manifesto: nome completo, WhatsApp, e-mail, data de nascimento, município e estado. Podemos também registrar informações técnicas de navegação e origem de acesso, como parâmetros de URL, para compreender o alcance das comunicações.</p>
 
           <h3>2. Uso das informações</h3>
-          <p>Os dados são usados para registrar sua adesão ao manifesto e para comunicar informações relacionadas à mobilização e à construção política da chapa Patrus, Áurea e Marília, inclusive por WhatsApp e e-mail.</p>
+          <p>Os dados são usados para registrar sua adesão ao manifesto e para comunicar informações relacionadas à sua mobilização e construção política, inclusive por WhatsApp e e-mail.</p>
 
           <h3>3. Compartilhamento de dados</h3>
           <p>Os dados não serão vendidos ou alugados. O acesso é limitado à equipe responsável pela mobilização e, quando necessário, a fornecedores tecnológicos que operam a infraestrutura do site e tratam os dados conforme as instruções da organização.</p>
