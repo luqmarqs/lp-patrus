@@ -34,6 +34,17 @@ h1 em, h2 em { font-style: normal; color: #ffd22a; }
 .manifesto p:not(.section-kicker) { font-size: clamp(18px, 1.75vw, 24px); line-height: 1.29; font-weight: 500; margin: 0 0 26px; }
 .manifesto .closing { font-size: clamp(26px, 3.2vw, 44px); line-height: .98; font-weight: 700; margin-top: 45px; max-width: 620px; }
 .manifesto-sun { position: absolute; width: min(54vw, 720px); right: -18vw; top: 20px; opacity: .18; }
+.signatories-section { position: relative; overflow: hidden; padding: 84px 20px; color: #fff; isolation: isolate; }
+.signatories-section::before, .signatories-section::after { content: ''; position: absolute; z-index: -1; width: clamp(130px, 24vw, 320px); aspect-ratio: 1; border: clamp(8px, 1.5vw, 18px) solid rgb(12 27 39 / .48); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+.signatories-section::before { top: -65px; right: 9%; transform: rotate(13deg); }
+.signatories-section::after { bottom: -85px; left: -45px; transform: rotate(-20deg); }
+.signatories-content { width: min(100%, 850px); margin: auto; }
+.signatories-content h2 { margin: 0; color: #fff; font-size: clamp(76px, 14vw, 168px); letter-spacing: -.1em; line-height: .72; text-transform: uppercase; }
+.signatories-call { margin: 26px 0 48px; max-width: 790px; font-size: clamp(27px, 5vw, 59px); font-weight: 500; letter-spacing: -.05em; line-height: .98; }
+.signatories-label { margin: 0 0 8px; font-size: clamp(20px, 3vw, 31px); font-weight: 400; }
+.signatories-list { margin: 0; padding: 0; list-style: none; font-size: clamp(25px, 4.1vw, 47px); font-weight: 700; letter-spacing: -.05em; line-height: 1.06; }
+.signatories-cta { margin-top: 62px; border: 2px solid #fff; border-radius: 999px; padding: 13px 26px; background: transparent; color: #fff; font-size: clamp(24px, 4vw, 42px); font-weight: 400; letter-spacing: -.04em; line-height: 1; text-transform: uppercase; transition: background .15s, color .15s; }
+.signatories-cta:hover, .signatories-cta:focus-visible { background: #fff; color: #006e91; }
 .form-section { color: #fff; padding: 88px 20px; position: relative; overflow: hidden; }
 .form-layout { max-width: 1180px; margin: auto; position: relative; z-index: 1; }
 .form-copy { max-width: 540px; }
@@ -80,6 +91,6 @@ input:disabled { opacity: .7; cursor: wait; }
 .privacy-footer { display: flex; justify-content: flex-end; border-top: 2px solid #e4d7c2; }
 .privacy-footer button { min-height: 40px; border: 2px solid #111; border-radius: 6px; padding: 0 21px; background: #006e91; color: #fff; font-size: 13px; font-weight: 700; text-transform: uppercase; box-shadow: 2px 2px 0 #111; }
 .privacy-footer button:hover, .privacy-footer button:focus-visible { transform: translate(1px, 1px); box-shadow: 1px 1px 0 #111; }
-@media (min-width: 768px) { .site-header { min-height: 88px; } .site-header button { font-size: 14px; } .hero { min-height: 680px; } .hero-inner { padding-top: 100px; } .hero-sun { right: -7vw; bottom: -38vw; } .opening { padding: 118px 40px; } .manifesto { padding: 125px 40px 138px; } .form-section { padding: 120px 40px; } .form-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(390px, .8fr); gap: 78px; align-items: start; } .form-copy p:not(.section-kicker) { margin-bottom: 0; } }
+@media (min-width: 768px) { .site-header { min-height: 88px; } .site-header button { font-size: 14px; } .hero { min-height: 680px; } .hero-inner { padding-top: 100px; } .hero-sun { right: -7vw; bottom: -38vw; } .opening { padding: 118px 40px; } .manifesto { padding: 125px 40px 138px; } .signatories-section { padding: 130px 40px; } .form-section { padding: 120px 40px; } .form-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(390px, .8fr); gap: 78px; align-items: start; } .form-copy p:not(.section-kicker) { margin-bottom: 0; } }
 @media (min-width: 1200px) { .hero-inner { padding-top: 112px; } .hero-sun { right: -2vw; bottom: -31vw; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }

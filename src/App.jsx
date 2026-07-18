@@ -65,6 +65,24 @@ export default function App() {
           </div>
         </section>
 
+        <section className="signatories-section dots-blue" aria-labelledby="signatories-title">
+          <div className="signatories-content">
+            <h2 id="signatories-title">Minas<br />Gerais</h2>
+            <p className="signatories-call">tem uma chance única.<br />E chances assim não se desperdiçam.</p>
+            <p className="signatories-label">Assinam este manifesto:</p>
+            <ul className="signatories-list">
+              <li>Ana Pimentel (PT)</li>
+              <li>Bella Gonçalves (PT)</li>
+              <li>Bruno Pedralva (PT)</li>
+              <li>Célia Xakriabá (PSOL)</li>
+              <li>Duda Salabert (PSOL)</li>
+              <li>Iza Lourença (PSOL)</li>
+              <li>Sílvio Netto (MST)</li>
+            </ul>
+            <button className="signatories-cta" type="button" onClick={scrollToForm}>Assine você também</button>
+          </div>
+        </section>
+
         <section className="form-section green-section dots-green" id="assine" aria-labelledby="form-title">
           <img className="form-sun" src={assets.sunFine} alt="" aria-hidden="true" loading="lazy" />
           <div className="form-layout">
