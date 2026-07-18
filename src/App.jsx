@@ -36,7 +36,6 @@ export default function App() {
   return (
     <>
       <header className="site-header">
-        <a className="wordmark" href="#inicio" aria-label="Manifesto Minas Gerais"><span>MINAS</span><span>GERAIS</span></a>
         <button type="button" onClick={scrollToForm}>Assine o manifesto <span aria-hidden="true">↘</span></button>
       </header>
       <main id="inicio">
@@ -46,7 +45,7 @@ export default function App() {
             <p className="eyebrow">Manifesto em defesa da chapa</p>
             <h1>Patrus,<br />Áurea<br /><em>e Marília</em></h1>
             <p className="hero-lead">Uma chance única para Minas Gerais.</p>
-            <button className="hero-cta" type="button" onClick={scrollToForm}>Quero assinar <span aria-hidden="true">↓</span></button>
+            <button className="hero-cta" type="button" onClick={scrollToForm}>Veja quem já assinou e assine também <span aria-hidden="true">↓</span></button>
           </div>
         </section>
 
@@ -58,11 +57,9 @@ export default function App() {
           </div>
         </section>
 
-        <section className="manifesto" aria-labelledby="manifesto-title">
+        <section className="manifesto">
           <img className="manifesto-sun" src={assets.sun} alt="" aria-hidden="true" loading="lazy" />
           <div className="manifesto-content">
-            <p className="section-kicker">POR UMA MINAS GERAIS PARA TODA GENTE</p>
-            <h2 id="manifesto-title">Uma chance única para Minas Gerais</h2>
             {manifestoParagraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
             <p className="closing">Minas Gerais tem uma chance única. E chances assim não se desperdiçam.</p>
           </div>

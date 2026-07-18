@@ -8,7 +8,6 @@ button, input, select { font: inherit; }
 button { cursor: pointer; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .site-header { min-height: 70px; padding: 12px clamp(20px, 5vw, 78px); background: #006f91; display: flex; align-items: center; justify-content: space-between; color: #fff; position: relative; z-index: 2; }
-.wordmark { color: inherit; font-size: 14px; font-weight: 700; text-decoration: none; line-height: .78; letter-spacing: -.09em; display: grid; }
 .site-header button { background: transparent; border: 0; color: inherit; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .03em; padding: 10px 0; }
 .site-header button span { font-size: 20px; margin-left: 6px; }
 .texture-orange { background: #c85e0b url('/Sem título - 17 de julho de 2026 às 10.15.56-1.webp') center / cover; }
@@ -81,6 +80,6 @@ input:disabled { opacity: .7; cursor: wait; }
 .privacy-footer { display: flex; justify-content: flex-end; border-top: 2px solid #e4d7c2; }
 .privacy-footer button { min-height: 40px; border: 2px solid #111; border-radius: 6px; padding: 0 21px; background: #006e91; color: #fff; font-size: 13px; font-weight: 700; text-transform: uppercase; box-shadow: 2px 2px 0 #111; }
 .privacy-footer button:hover, .privacy-footer button:focus-visible { transform: translate(1px, 1px); box-shadow: 1px 1px 0 #111; }
-@media (min-width: 768px) { .site-header { min-height: 88px; } .wordmark { font-size: 20px; } .site-header button { font-size: 14px; } .hero { min-height: 680px; } .hero-inner { padding-top: 100px; } .hero-sun { right: -7vw; bottom: -38vw; } .opening { padding: 118px 40px; } .manifesto { padding: 125px 40px 138px; } .form-section { padding: 120px 40px; } .form-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(390px, .8fr); gap: 78px; align-items: start; } .form-copy p:not(.section-kicker) { margin-bottom: 0; } }
+@media (min-width: 768px) { .site-header { min-height: 88px; } .site-header button { font-size: 14px; } .hero { min-height: 680px; } .hero-inner { padding-top: 100px; } .hero-sun { right: -7vw; bottom: -38vw; } .opening { padding: 118px 40px; } .manifesto { padding: 125px 40px 138px; } .form-section { padding: 120px 40px; } .form-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(390px, .8fr); gap: 78px; align-items: start; } .form-copy p:not(.section-kicker) { margin-bottom: 0; } }
 @media (min-width: 1200px) { .hero-inner { padding-top: 112px; } .hero-sun { right: -2vw; bottom: -31vw; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
