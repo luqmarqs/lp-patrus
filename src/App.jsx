@@ -50,7 +50,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="opening blue-section dots-blue">
+        <section className="opening blue-section dots-blue" hidden>
           <div className="content-narrow">
             <p className="section-kicker">MINAS PRECISA ESCOLHER UM NOVO CAMINHO</p>
             <h2>Minas é gigante.<br /><em>O nosso futuro também precisa ser.</em></h2>
@@ -82,26 +82,10 @@ export default function App() {
       </main>
       <footer className="site-footer">
         <div className="footer-inner">
-          <img className="iza-logo" src="/LOGO.webp" alt="Logo Iza Lourença" loading="lazy" />
           <div className="footer-center">
-            <nav className="social-links" aria-label="Redes sociais">
-              <a href="#inicio" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.8" r="1" className="filled" /></svg>
-              </a>
-              <a href="#inicio" aria-label="Facebook">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 21v-8h3l.45-3H14V8.1c0-.87.28-1.46 1.55-1.46H17.6V3.95c-.35-.05-1.5-.15-2.83-.15-2.8 0-4.72 1.7-4.72 4.85V10H7v3h3.05v8H14Z" className="filled" /></svg>
-              </a>
-              <a href="#inicio" aria-label="X">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.25 2.5h3.15l-6.88 7.87 8.1 10.72h-6.34l-4.95-6.48-5.68 6.48H2.5l7.35-8.4L1.99 2.5h6.4l4.47 5.91 5.39-5.91Zm-1.1 16.99h1.75L7.44 4.02H5.56l11.59 15.47Z" className="filled" /></svg>
-              </a>
-              <a href="#inicio" aria-label="TikTok">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 5.62c1.1.8 2.32 1.25 3.73 1.3v3.46c-1.35-.04-2.62-.35-3.73-.9v5.52a5.33 5.33 0 1 1-7.22-4.98v3.7a1.86 1.86 0 1 0 2.65 1.68V2.75h4.3v2.87Z" className="filled" /></svg>
-              </a>
-            </nav>
             <p>© 2026 IZA LOURENÇA - Pré-candidata a Deputada Estadual pelo PSOL. Todos os direitos reservados.</p>
             <button className="privacy-link" type="button" onClick={() => setIsPrivacyOpen(true)}>Política de privacidade</button>
           </div>
-          <img className="psol-logo" src="/psol-logo.webp" alt="PSOL" loading="lazy" />
         </div>
       </footer>
       <PrivacyPolicyModal isOpen={isPrivacyOpen} onClose={() => setIsPrivacyOpen(false)} />

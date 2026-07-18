@@ -62,16 +62,9 @@ input:disabled { opacity: .7; cursor: wait; }
 .form-privacy-notice button:hover, .form-privacy-notice button:focus-visible { color: #f8ca21; }
 .form-success { padding: 12px; background: #f7ca20; border: 2px solid #101010; border-radius: 8px; color: #111; margin-top: 16px; }
 .form-submit-error { padding: 12px; background: #fff2c8; border: 2px solid #101010; border-radius: 8px; color: #72121c; margin-top: 16px; }
-.site-footer { background: #111; color: #d1d1d1; padding: 26px 24px; }
-.footer-inner { max-width: 1200px; min-height: 60px; margin: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; }
-.iza-logo { width: 140px; height: auto; object-fit: contain; }
-.psol-logo { height: 40px; width: auto; opacity: .7; object-fit: contain; }
+.site-footer { background: #111; color: #d1d1d1; padding: 22px 24px; }
+.footer-inner { max-width: 1200px; margin: auto; display: flex; justify-content: center; }
 .footer-center { text-align: center; }
-.social-links { display: flex; justify-content: center; align-items: center; gap: 24px; margin-bottom: 12px; }
-.social-links a { display: grid; place-items: center; color: #fff; width: 24px; height: 24px; transition: color .15s; }
-.social-links a:hover, .social-links a:focus-visible { color: #d86f9d; }
-.social-links svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.6; }
-.social-links .filled { fill: currentColor; stroke: none; }
 .footer-center p { margin: 0; font-size: 12px; font-weight: 500; letter-spacing: .03em; line-height: 1.35; }
 .privacy-link { border: 0; background: transparent; padding: 7px 0 0; color: #fff; font-size: 12px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .privacy-link:hover, .privacy-link:focus-visible { color: #d86f9d; }
@@ -89,6 +82,5 @@ input:disabled { opacity: .7; cursor: wait; }
 .privacy-footer button { min-height: 40px; border: 2px solid #111; border-radius: 6px; padding: 0 21px; background: #006e91; color: #fff; font-size: 13px; font-weight: 700; text-transform: uppercase; box-shadow: 2px 2px 0 #111; }
 .privacy-footer button:hover, .privacy-footer button:focus-visible { transform: translate(1px, 1px); box-shadow: 1px 1px 0 #111; }
 @media (min-width: 768px) { .site-header { min-height: 88px; } .wordmark { font-size: 20px; } .site-header button { font-size: 14px; } .hero { min-height: 680px; } .hero-inner { padding-top: 100px; } .hero-sun { right: -7vw; bottom: -38vw; } .opening { padding: 118px 40px; } .manifesto { padding: 125px 40px 138px; } .form-section { padding: 120px 40px; } .form-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(390px, .8fr); gap: 78px; align-items: start; } .form-copy p:not(.section-kicker) { margin-bottom: 0; } }
-@media (min-width: 1100px) { .footer-inner { position: relative; flex-direction: row; } .iza-logo { position: absolute; left: 0; } .psol-logo { position: absolute; right: 0; } }
 @media (min-width: 1200px) { .hero-inner { padding-top: 112px; } .hero-sun { right: -2vw; bottom: -31vw; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
