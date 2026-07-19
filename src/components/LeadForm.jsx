@@ -164,7 +164,14 @@ export default function LeadForm({ onOpenPrivacy }) {
         Ao assinar, você concorda com o tratamento dos seus dados conforme a nossa{' '}
         <button type="button" onClick={onOpenPrivacy}>Política de Privacidade</button>.
       </p>
-      {success && <p className="form-success" role="status">Obrigada por assinar. Sua participação fortalece Minas Gerais.</p>}
+      {success && (
+        <p className="form-success" role="status">
+          {values.name.trim()},<br /><br />
+          Obrigado por assinar nosso manifesto.<br /><br />
+          Vamos juntos em defesa da Minas Gerais que merecemos e precisamos.<br /><br />
+          Bolsozema nunca mais!
+        </p>
+      )}
       {submitError && <p className="form-submit-error" role="alert">{submitError}</p>}
     </form>
   )
