@@ -46,6 +46,7 @@ export default function LeadForm({ onOpenPrivacy }) {
   const [success, setSuccess] = useState(false)
   const [submitError, setSubmitError] = useState('')
   const fieldRefs = useRef({})
+  const formOpenedAt = useRef(Date.now())
   const uid = useId()
   const isValidCity = useMemo(
     () => municipalities.some((municipality) => municipality.name === values.city),
@@ -100,6 +101,7 @@ export default function LeadForm({ onOpenPrivacy }) {
         ...values,
         whatsapp: values.whatsapp.replace(/\D/g, ''),
         birthDate: birthDateToIso(values.birthDate),
+        elapsedMs: Date.now() - formOpenedAt.current,
       })
       setSuccess(true)
     } catch {

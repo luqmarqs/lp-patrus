@@ -3,9 +3,9 @@ import { supabase } from './supabase'
 export async function submitLead(lead) {
   if (!supabase) throw new Error('A integração de assinaturas não está configurada.')
 
-  const { data, error } = await supabase.functions.invoke('public-submit', {
+  const { data, error } = await supabase.functions.invoke('manifesto-patrus-submit', {
     body: {
-      mode: 'manifesto_signature',
+      elapsedMs: lead.elapsedMs,
       form: {
         name: lead.name.trim(),
         whatsapp: lead.whatsapp,

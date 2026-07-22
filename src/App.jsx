@@ -98,7 +98,6 @@ export default function App() {
       <footer className="site-footer">
         <div className="footer-inner">
           <div className="footer-center">
-            <p>Assinado por Iza Lourença, Duda Salabert, Ana Pimentel, Bruno Pedralva, Bella Gonçalves e Célia Xakriabá.</p>
             <button className="privacy-link" type="button" onClick={() => setIsPrivacyOpen(true)}>Política de privacidade</button>
           </div>
         </div>
